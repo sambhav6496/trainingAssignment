@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="top">
+        <div class="filters">
+            <div class="view">
+                <button (click)="changeView('grid')" [ngStyle]="{'backgroundColor': (width == 40) ? '' : 'yellow'}">Grid View</button>
+                <button (click)="changeView('list')" [ngStyle]="{'backgroundColor': (width == 20) ? '' : 'yellow'}">List View</button>
+            </div>
+            <div class="price">
+                <p>Price Filter:
+                    <select name="pricefilter" class="pricefilter">
+                     <option value="low" selected>low to high</option>
+                     <option value="High">high to low</option>
+                    </select>
+                   </p>
+            </div>
+        </div>
+    </div>
+    <div class="boxContainer">
+    <div *ngFor='let in of createBoxes(40)' class="box" [ngStyle]="{'width': width+'%'}"></div>
+    </div>
+</div>

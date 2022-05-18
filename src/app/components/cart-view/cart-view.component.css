@@ -1,0 +1,18 @@
+.boxContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    margin: 5px;
+    height: 100px;
+    border: 1px solid black;
+}
+.filters{
+  
+    display: flex;
+    justify-content: flex-end;
+}
+.view{
+    margin : 12px;
+}
