@@ -1,0 +1,14 @@
+<div class="container">
+  <div *ngIf="showTimerInput">
+    <label for="timer">Enter Time in seconds</label>
+    <input id="timer" type="number" [(ngModel)]="timer" />
+  </div>
+  <div class="buttons">
+    <button (click)="timerActions('start')" *ngIf="start">start</button>
+    <button (click)="timerActions('pause')" *ngIf="!start">pause</button>
+    <button (click)="timerActions('stop')">reset</button>
+  </div>
+  <div class="timerActions">
+    <p *ngFor="let stamp of timerStamps">paused at {{ stamp }}</p>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="box timer">
+    <h3>Count Down Timer</h3>
+    <p>{{ timer }}</p>
+  </div>
+  <div class="box startTimer">
+    <app-start-timer
+      [timer]="timer"
+      (timerEvent)="setTimer($event)"
+      (timerActionEvent)="timerAction($event)"
+    ></app-start-timer>
+  </div>
+  <div class="box timeLog">
+    <app-timer-log></app-timer-log>
+  </div>
+  <div class="box clickLog">
+    <app-click-log></app-click-log>
+  </div>
+</div>
