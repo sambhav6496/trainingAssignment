@@ -1,1 +1,5 @@
-<p>dynamically-div works!</p>
+<ng-container *ngIf="myArray.length > 0">
+  <div *ngFor="let vlaue of myArray; let i = index">
+    <button (click)="divClicked(i + 1)">click {{ i + 1 }}</button>
+  </div>
+</ng-container>
