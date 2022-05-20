@@ -1,0 +1,49 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Ajay",
+      "class": 3,
+      "section":"A",
+      "sub1" : 10,
+      "sub2" : 2,
+      "sub3" : 5
+    },
+    {
+      "id": 2,
+      "name": "Vijay",
+      "class": 3,
+      "section":"D",
+      "sub1" : 3,
+      "sub2" : 6,
+      "sub3" : 4
+    },
+    {
+      "id": 3,
+      "name": "Rahul",
+      "class": 3,
+      "section":"A",
+      "sub1" : 4,
+      "sub2" : 6,
+      "sub3" : 3
+    },
+    {
+      "id": 1,
+      "name": "Karan",
+      "class": 3,
+      "section":"A",
+      "sub1" : 9,
+      "sub2" : 8,
+      "sub3" : 9
+    },
+    {
+      "id": 1,
+      "name": "Arjun",
+      "class": 3,
+      "section":"A",
+      "sub1" : 7,
+      "sub2" : 6,
+      "sub3" : 10
+    }
+  ]
+}

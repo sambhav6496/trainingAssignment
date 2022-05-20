@@ -10,6 +10,15 @@ import { StartTimerComponent } from './components/timer/start-timer/start-timer.
 import { TimerLogComponent } from './components/timer/timer-log/timer-log.component';
 import { ClickLogComponent } from './components/timer/click-log/click-log.component';
 import { FormsModule } from '@angular/forms';
+import { TimerWithServiceComponent } from './components/timer-with-service/timer-with-service.component';
+import { ClickLogServiceComponent } from './components/timer-with-service/click-log-service/click-log-service.component';
+import { TimerServiceComponent } from './components/timer-with-service/timer-service/timer-service.component';
+import { StartTimerServiceComponent } from './components/timer-with-service/start-timer-service/start-timer-service.component';
+import { StudentMarksTableComponent } from './components/student-marks-table/student-marks-table.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSortModule } from '@angular/material/sort';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DynamicallyDivComponent } from './components/dynamically-div/dynamically-div.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +28,23 @@ import { FormsModule } from '@angular/forms';
     TimerComponent,
     StartTimerComponent,
     TimerLogComponent,
-    ClickLogComponent
+    ClickLogComponent,
+    TimerWithServiceComponent,
+    ClickLogServiceComponent,
+    TimerServiceComponent,
+    StartTimerServiceComponent,
+    StudentMarksTableComponent,
+    DynamicallyDivComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatSortModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,0 +1,19 @@
+<table matSort (matSortChange)="sortData($event)">
+  <tr>
+    <th mat-sort-header="name">Name</th>
+    <th mat-sort-header="class">Class</th>
+    <th mat-sort-header="section">Section</th>
+    <th mat-sort-header="sub1">Sub1</th>
+    <th mat-sort-header="sub2">Sub2</th>
+    <th mat-sort-header="sub3">Sub3</th>
+  </tr>
+
+  <tr *ngFor="let student of studentsDataCopy">
+    <td>{{ student.name }}</td>
+    <td>{{ student.class }}</td>
+    <td>{{ student.section }}</td>
+    <td>{{ student.sub1 }}</td>
+    <td>{{ student.sub2 }}</td>
+    <td>{{ student.sub3 }}</td>
+  </tr>
+</table>
