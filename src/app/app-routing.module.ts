@@ -8,12 +8,46 @@ import { TimerWithServiceComponent } from './components/timer-with-service/timer
 import { TimerComponent } from './components/timer/timer.component';
 
 const routes: Routes = [
-  { path: 'floatinBanner', component: FloatingBannerComponent },
-  { path: 'cartView', component: CartViewComponent },
-  { path: 'timer', component: TimerComponent },
-  { path: 'timerWithService', component: TimerWithServiceComponent },
-  { path: 'studentMarks', component: StudentMarksTableComponent },
-  { path: 'dynamicDiv', component: DynamicallyDivComponent },
+  {
+    path: 'floatinBanner',
+    loadChildren: () =>
+      import('./components/floating-banner/floating-banner.module').then(
+        (m) => m.FloatingBannerModule
+      ),
+  },
+  {
+    path: 'cartView',
+    loadChildren: () =>
+      import('./components/cart-view/cart-view.module').then(
+        (m) => m.CartViewModule
+      ),
+  },
+  {
+    path: 'timer',
+    loadChildren: () =>
+      import('./components/timer/timer.module').then((m) => m.TimerModule),
+  },
+  {
+    path: 'timerWithService',
+    loadChildren: () =>
+      import('./components/timer-with-service/timer-with-service.module').then(
+        (m) => m.TimerWithServiceModule
+      ),
+  },
+  {
+    path: 'studentMarks',
+    loadChildren: () =>
+      import('./components/student-marks-table/student-marks.module').then(
+        (m) => m.StudentMarksModule
+      ),
+  },
+  {
+    path: 'dynamicDiv',
+    loadChildren: () =>
+      import('./components/dynamically-div/dynamic.module').then(
+        (m) => m.DynamicModule
+      ),
+  },
 ];
 
 @NgModule({
