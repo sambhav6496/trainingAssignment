@@ -1,3 +1,6 @@
 .active-link{
     background-color: grey;
 }
+.linkContainer{
+    display: flex;
+}
