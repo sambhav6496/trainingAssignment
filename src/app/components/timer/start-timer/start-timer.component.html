@@ -1,10 +1,15 @@
 <div class="container">
   <div *ngIf="showTimerInput">
     <label for="timer">Enter Time in seconds</label>
-    <input id="timer" type="number" [(ngModel)]="timer" />
+    <input id="timer" type="number" min="0" [(ngModel)]="timer" />
+    <div>
+      <p *ngIf="isTimerEqualToZero">Timer value should be greater than 0</p>
+    </div>
   </div>
   <div class="buttons">
-    <button (click)="timerActions('start')" *ngIf="start">start</button>
+    <button (click)="timerActions('start'); checkIfTimerIsZero()" *ngIf="start">
+      start
+    </button>
     <button (click)="timerActions('pause')" *ngIf="!start">pause</button>
     <button (click)="timerActions('stop')">reset</button>
   </div>

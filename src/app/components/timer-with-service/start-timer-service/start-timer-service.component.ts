@@ -20,6 +20,7 @@ export class StartTimerServiceComponent implements OnInit, OnDestroy {
   timerStamps = [];
   start: boolean = true;
   stop: boolean = false;
+  isTimerEqualToZero: boolean = false;
   timerSubscription: Subscription;
   constructor(private timerService: TimerService) {
     this.timerSubscription = this.timerService.timerValue.subscribe((data) => {
@@ -28,6 +29,13 @@ export class StartTimerServiceComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {}
+  checkIfTimerIsZero() {
+    if (this.timer === 0) {
+      this.isTimerEqualToZero = true;
+    } else {
+      this.isTimerEqualToZero = false;
+    }
+  }
   timerActions(action) {
     if (action == 'pause' && this.timer > 0) {
       this.timerStamps.push(this.timer);

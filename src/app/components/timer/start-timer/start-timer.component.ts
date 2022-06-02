@@ -13,9 +13,18 @@ export class StartTimerComponent implements OnInit {
   timerStamps = [];
   start: boolean = true;
   stop: boolean = false;
+  isTimerEqualToZero: boolean = false;
   constructor() {}
 
   ngOnInit(): void {}
+
+  checkIfTimerIsZero() {
+    if (this.timer === 0) {
+      this.isTimerEqualToZero = true;
+    } else {
+      this.isTimerEqualToZero = false;
+    }
+  }
   timerActions(action) {
     if (action == 'pause' && this.timer > 0) {
       this.timerStamps.push(this.timer);
